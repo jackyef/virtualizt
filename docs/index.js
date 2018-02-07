@@ -16,9 +16,8 @@ function Virtualizt(setting) {
     height: ${setting.height}px;
     max-height: ${setting.height}px;
     position: relative;
+    overflow-y: scroll;
   `;
-  root.style.minHeight = setting.height + 'px';
-  root.style.overflow = 'scroll';
   root.lastStartIndex = 0;
   root.lastEndIndex = 0;
 
@@ -32,8 +31,8 @@ function Virtualizt(setting) {
       position: absolute;
       min-height: ${setting.itemHeight}px;
       height: ${setting.itemHeight}px;
-      min-width: ${setting.itemHeight}px;
-      width: ${setting.itemHeight}px;
+      min-width: 99.5%;
+      width: 99.5%;
       top: ${currentItem.position}px;
       padding-bottom: ${totalHeight - (setting.itemHeight * (i+1))}px;
       border: 1px solid black;
